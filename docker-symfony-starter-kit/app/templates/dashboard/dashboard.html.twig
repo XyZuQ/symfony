@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ "dashboard"|trans }}{% endblock %}
+
+{% block body %}
+    <main>
+    <div class="d-flex flex-column p-3 bg-dark vh-100" style="width: 20vw">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+            <span class="fs-4">Menu</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+                <a href="#" class="nav-link text-white">
+                    {{ "contact_list"|trans }}
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-white">
+                    {{ "event_list"|trans }}
+                </a>
+            </li>
+            <li>
+                <a href="#" class="nav-link text-white">
+                    {{ "category_list"|trans }}
+                </a>
+            </li>
+        </ul>
+    </div>
+    </main>
+{% endblock %}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="pl" target-language="pl" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="QoghNQ6" resname="login">
+        <source>login</source>
+        <target>Zaloguj się</target>
+      </trans-unit>
+      <trans-unit id="giREF.l" resname="email">
+        <source>email</source>
+        <target>E-mail</target>
+      </trans-unit>
+      <trans-unit id="XohImNo" resname="password">
+        <source>password</source>
+        <target>Hasło</target>
+      </trans-unit>
+      <trans-unit id="h3gPpd5" resname="register">
+        <source>register</source>
+        <target>Zarejestruj się</target>
+      </trans-unit>
+      <trans-unit id="0l0K6UP" resname="registration.password.not_blank">
+        <source>registration.password.not_blank</source>
+        <target>Proszę podać hasło</target>
+      </trans-unit>
+      <trans-unit id="CqtNK9o" resname="registration.password.min_length">
+        <source>registration.password.min_length</source>
+        <target>Twoje hasło powinno mieć minimum {{ limit }} znaków</target>
+      </trans-unit>
+      <trans-unit id="contact_list" resname="contact_list">
+         <source>contact_list</source>
+         <target>Lista kontaków</target>
+      </trans-unit>
+      <trans-unit id="event_list" resname="event_list">
+        <source>event_list</source>
+        <target>Lista wydarzeń</target>
+      </trans-unit>
+      <trans-unit id="category_list" resname="category_list">
+          <source>category_list</source>
+          <target>Lista kategorii</target>
+      </trans-unit>
+      <trans-unit id="redirect_register" resname="redirect_register">
+          <source>redirect_register</source>
+          <target>Przejdź do rejestracji</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="pl" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="QoghNQ6" resname="login">
+        <source>login</source>
+        <target>Log in</target>
+      </trans-unit>
+      <trans-unit id="giREF.l" resname="email">
+        <source>email</source>
+        <target>E-mail</target>
+      </trans-unit>
+      <trans-unit id="XohImNo" resname="password">
+        <source>password</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="h3gPpd5" resname="register">
+        <source>register</source>
+        <target>Register</target>
+      </trans-unit>
+      <trans-unit id="registration.password.not_blank">
+        <source>>registration.password.not_blank</source>
+        <target>Please enter a password</target>
+      </trans-unit>
+      <trans-unit id="registration.password.min_length">
+        <source>registration.password.min_length</source>
+        <target>Your password should be at least {{ limit }} characters</target>
+      </trans-unit>
+      <trans-unit id="dashboard" resname="dashboard">
+         <source>dashboard</source>
+         <target>Dashboard</target>
+      </trans-unit>
+      <trans-unit id="contact_list" resname="contact_list">
+          <source>contact_list</source>
+          <target>Contact list</target>
+      </trans-unit>
+      <trans-unit id="event_list" resname="event_list">
+          <source>event_list</source>
+          <target>Event list</target>
+      </trans-unit>
+      <trans-unit id="category_list" resname="category_list">
+          <source>category_list</source>
+          <target>Category list</target>
+      </trans-unit>
+      <trans-unit id="redirect_register" resname="redirect_register">
+          <source>redirect_register</source>
+          <target>Go to register</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
