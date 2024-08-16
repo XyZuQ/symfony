@@ -29,21 +29,129 @@
         <source>registration.password.min_length</source>
         <target>Twoje hasło powinno mieć minimum {{ limit }} znaków</target>
       </trans-unit>
-      <trans-unit id="contact_list" resname="contact_list">
-         <source>contact_list</source>
-         <target>Lista kontaków</target>
+      <trans-unit id=".JFhGW." resname="contact_list">
+        <source>contact_list</source>
+        <target>Lista kontaków</target>
       </trans-unit>
-      <trans-unit id="event_list" resname="event_list">
+      <trans-unit id="N9289hP" resname="event_list">
         <source>event_list</source>
         <target>Lista wydarzeń</target>
       </trans-unit>
-      <trans-unit id="category_list" resname="category_list">
-          <source>category_list</source>
-          <target>Lista kategorii</target>
+      <trans-unit id="7RJrAom" resname="category_list">
+        <source>category_list</source>
+        <target>Lista kategorii</target>
       </trans-unit>
-      <trans-unit id="redirect_register" resname="redirect_register">
-          <source>redirect_register</source>
-          <target>Przejdź do rejestracji</target>
+      <trans-unit id="vHpFjyy" resname="redirect_register">
+        <source>redirect_register</source>
+        <target>Przejdź do rejestracji</target>
+      </trans-unit>
+      <trans-unit id="r2IGFTF" resname="edit_contact">
+        <source>edit_contact</source>
+        <target>Edytuj kontakt</target>
+      </trans-unit>
+      <trans-unit id="EAVImTh" resname="create_contact">
+        <source>create_contact</source>
+        <target>Stwórz kontakt</target>
+      </trans-unit>
+      <trans-unit id="qlr0CE8" resname="contacts">
+        <source>contacts</source>
+        <target>Kontakty</target>
+      </trans-unit>
+      <trans-unit id="yJUB1aj" resname="add_new_contact">
+        <source>add_new_contact</source>
+        <target>Dodaj nowy kontakt</target>
+      </trans-unit>
+      <trans-unit id="BUFvv5j" resname="first_name">
+        <source>first_name</source>
+        <target>Imie</target>
+      </trans-unit>
+      <trans-unit id="4D1KCsF" resname="second_name">
+        <source>second_name</source>
+        <target>Nazwisko</target>
+      </trans-unit>
+      <trans-unit id="RVadpX9" resname="phone">
+        <source>phone</source>
+        <target>Telefon</target>
+      </trans-unit>
+      <trans-unit id="YAjCb0R" resname="street">
+        <source>street</source>
+        <target>Ulica</target>
+      </trans-unit>
+      <trans-unit id="NJAGUnX" resname="post_code">
+        <source>post_code</source>
+        <target>Kod pocztowy</target>
+      </trans-unit>
+      <trans-unit id="EaYsI0E" resname="city">
+        <source>city</source>
+        <target>Miasto</target>
+      </trans-unit>
+      <trans-unit id="JiEhxTc" resname="edit">
+        <source>edit</source>
+        <target>Edytuj</target>
+      </trans-unit>
+      <trans-unit id="YZdZVQP" resname="delete">
+        <source>delete</source>
+        <target>Usuń</target>
+      </trans-unit>
+      <trans-unit id="NIv3q75" resname="no_records">
+        <source>no_records</source>
+        <target>Brak rekordów</target>
+      </trans-unit>
+      <trans-unit id="Zs2WiKK" resname="dashboard">
+        <source>dashboard</source>
+        <target>Panel</target>
+      </trans-unit>
+      <trans-unit id="eUf5YZ3" resname="Event Form">
+        <source>Event Form</source>
+        <target>Formularz wydarzenia</target>
+      </trans-unit>
+      <trans-unit id="FQn1YfJ" resname="Save">
+        <source>Save</source>
+        <target>Zapisz</target>
+      </trans-unit>
+      <trans-unit id="jRT25y3" resname="Events">
+        <source>Events</source>
+        <target>Wydarzenia</target>
+      </trans-unit>
+      <trans-unit id="hiQXuef" resname="events">
+        <source>events</source>
+        <target>Wydarzenia</target>
+      </trans-unit>
+      <trans-unit id="7gmyV_y" resname="add_new_event">
+        <source>add_new_event</source>
+        <target>Dodaj nowe wydarzenie</target>
+      </trans-unit>
+      <trans-unit id="gqNTf.D" resname="name">
+        <source>name</source>
+        <target>Nazwa</target>
+      </trans-unit>
+      <trans-unit id="yQRveje" resname="description">
+        <source>description</source>
+        <target>Opis</target>
+      </trans-unit>
+      <trans-unit id="UevEVsC" resname="date_from">
+        <source>date_from</source>
+        <target>Data od</target>
+      </trans-unit>
+      <trans-unit id="D1jgGr0" resname="date_to">
+        <source>date_to</source>
+        <target>Data do</target>
+      </trans-unit>
+      <trans-unit id="Kw3N1AA" resname="actions">
+        <source>actions</source>
+        <target>Akcje</target>
+      </trans-unit>
+      <trans-unit id="RkxP.QG" resname="Edit">
+        <source>Edit</source>
+        <target>Edytuj</target>
+      </trans-unit>
+      <trans-unit id="8HYsTzv" resname="Are you sure?">
+        <source>Are you sure?</source>
+        <target>Czy na pewno?</target>
+      </trans-unit>
+      <trans-unit id="4tClSWj" resname="Delete">
+        <source>Delete</source>
+        <target>Usuń</target>
       </trans-unit>
     </body>
   </file>

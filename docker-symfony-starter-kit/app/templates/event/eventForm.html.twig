@@ -1,0 +1,29 @@
+{% extends 'dashboard/dashboard.html.twig' %}
+
+{% block title %}{{ "Event Form" | trans }}{% endblock %}
+
+{% block display %}
+    <div class="container mt-4">
+        <h2>{{ "Event Form" | trans }}</h2>
+
+        {{ form_start(form) }}
+        <div class="form-group">
+            {{ form_label(form.name) }}
+            {{ form_widget(form.name, { 'attr': {'class': 'form-control'} }) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.description) }}
+            {{ form_widget(form.description, { 'attr': {'class': 'form-control'} }) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.dateFrom) }}
+            {{ form_widget(form.dateFrom, { 'attr': {'class': 'form-control'} }) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.dateTo) }}
+            {{ form_widget(form.dateTo, { 'attr': {'class': 'form-control'} }) }}
+        </div>
+        <button type="submit" class="btn btn-success mt-3">{{ "Save" | trans }}</button>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

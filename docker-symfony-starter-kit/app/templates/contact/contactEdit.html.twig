@@ -1,0 +1,47 @@
+{% extends 'dashboard/dashboard.html.twig' %}
+
+{% block title %}{{ "edit_contact"|trans }}{% endblock %}
+
+{% block display %}
+    <div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="card shadow-sm" style="width: 100%; max-width: 500px;">
+            <div class="card-body">
+                <h1 class="card-title text-center">{{ "edit_contact"|trans }}</h1>
+
+                {{ form_start(form) }}
+                <div class="mb-3">
+                    {{ form_label(form.firstName, null, {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.firstName, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <div class="mb-3">
+                    {{ form_label(form.lastName, null, {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.lastName, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <div class="mb-3">
+                    {{ form_label(form.email, null, {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <div class="mb-3">
+                    {{ form_label(form.phone, null, {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.phone, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <div class="mb-3">
+                    {{ form_label(form.street, null, {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.street, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <div class="mb-3">
+                    {{ form_label(form.postCode, null, {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.postCode, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <div class="mb-3">
+                    {{ form_label(form.city, null, {'label_attr': {'class': 'form-label'}}) }}
+                    {{ form_widget(form.city, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <div class="d-grid">
+                    {{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}
+                </div>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

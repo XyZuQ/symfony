@@ -1,0 +1,47 @@
+{% extends 'dashboard/dashboard.html.twig' %}
+
+{% block title %}{{ "contacts"|trans }}{% endblock %}
+
+{% block display %}
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1>{{ "contacts"|trans }}</h1>
+        <a href="{{ path('app_contact_create') }}" class="btn btn-success">{{ "add_new_contact"|trans }}</a>
+    </div>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>{{ "first_name"|trans }}</th>
+            <th>{{ "second_name"|trans }}</th>
+            <th>{{ "email"|trans }}</th>
+            <th>{{ "phone"|trans }}</th>
+            <th>{{ "street"|trans }}</th>
+            <th>{{ "post_code"|trans }}</th>
+            <th>{{ "city"|trans }}</th>
+            <th>actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in items %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.firstName }}</td>
+                <td>{{ item.lastName }}</td>
+                <td>{{ item.email }}</td>
+                <td>{{ item.phone }}</td>
+                <td>{{ item.street }}</td>
+                <td>{{ item.postCode }}</td>
+                <td>{{ item.city }}</td>
+                <td>
+                    <a href="{{ path('app_contact_edit', {'id': item.id}) }}" class="btn btn-warning">{{ "edit"|trans }}</a>
+                    <a href="{{ path('app_contact_delete', {'id': item.id}) }}" class="btn btn-danger">{{ "delete"|trans }}</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">{{ "no_records"|trans }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
