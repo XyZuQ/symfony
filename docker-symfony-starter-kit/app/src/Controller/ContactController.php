@@ -73,7 +73,7 @@ class ContactController extends AbstractController
     }
 
 
-    #[Route('/contact/delete/{id}', name: 'app_contact_delete', methods: ['POST', 'DELETE'])]
+    #[Route('/contact/delete/{id}', name: 'app_contact_delete')]
     public function contactDelete(int $id, Request $request): Response
     {
         $contact = $this->contactRepository->find($id);

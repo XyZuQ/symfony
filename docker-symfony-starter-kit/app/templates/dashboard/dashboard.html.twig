@@ -12,17 +12,17 @@
                 <hr>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
-                        <a href="/contacts" class="nav-link text-white">
+                        <a href="{{ path('app_contacts') }}" class="nav-link text-white">
                             {{ "contact_list"|trans }}
                         </a>
                     </li>
                     <li>
-                        <a href="/events" class="nav-link text-white">
+                        <a href="{{ path('app_events') }}" class="nav-link text-white">
                             {{ "event_list"|trans }}
                         </a>
                     </li>
                     <li>
-                        <a href="/categories" class="nav-link text-white">
+                        <a class="nav-link text-white">
                             {{ "category_list"|trans }}
                         </a>
                     </li>
