@@ -157,6 +157,42 @@
         <source>Delete</source>
         <target>Delete</target>
       </trans-unit>
+      <trans-unit id="all_categories" resname="all_categories">
+        <source>all_categories</source>
+        <target>All categories</target>
+      </trans-unit>
+      <trans-unit id="category" resname="category">
+        <source>category</source>
+        <target>Category</target>
+      </trans-unit>
+      <trans-unit id="Categories" resname="Categories">
+        <source>Categories</source>
+        <target>Categories</target>
+      </trans-unit>
+      <trans-unit id="categories" resname="categories">
+        <source>categories</source>
+        <target>categories</target>
+      </trans-unit>
+      <trans-unit id="add_new_category" resname="add_new_category">
+        <source>add_new_category</source>
+        <target>Add new category</target>
+      </trans-unit>
+      <trans-unit id="Category Form" resname="Category Form">
+        <source>Category Form</source>
+        <target>Category Form</target>
+      </trans-unit>
+      <trans-unit id="Category Name" resname="Category Name">
+        <source>Category Name</source>
+        <target>Category Name</target>
+      </trans-unit>
+      <trans-unit id="Current and upcoming events" resname="Current and upcoming events">
+        <source>Current and upcoming events</source>
+        <target>Current and upcoming events</target>
+      </trans-unit>
+      <trans-unit id="No current or upcoming events" resname="No current or upcoming events">
+        <source>No current or upcoming events</source>
+        <target>No current or upcoming events</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

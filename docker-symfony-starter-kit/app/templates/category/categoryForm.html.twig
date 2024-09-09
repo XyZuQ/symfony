@@ -1,0 +1,21 @@
+{% extends 'dashboard/dashboard.html.twig' %}
+
+{% block title %}{{ "Category Form" | trans }}{% endblock %}
+
+{% block display %}
+    <div class="container mt-4">
+        <h2>{{ "Category Form" | trans }}</h2>
+
+        {{ form_start(form) }}
+        <div class="form-group">
+            {{ form_label(form.name) }}
+            {{ form_widget(form.name, { 'attr': {'class': 'form-control'} }) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.event) }}
+            {{ form_widget(form.event, { 'attr': {'class': 'form-control'} }) }}
+        </div>
+        <button type="submit" class="btn btn-success mt-3">{{ "Save" | trans }}</button>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

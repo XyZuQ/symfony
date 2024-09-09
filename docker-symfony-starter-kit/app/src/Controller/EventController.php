@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Event;
 use App\Form\EventType;
+use App\Repository\CategoryRepository;
 use App\Repository\EventRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -21,10 +22,20 @@ class EventController extends AbstractController
     }
 
     #[Route('/events', name: 'app_events')]
-    public function eventList(EventRepository $eventRepository): Response
+    public function eventList(Request $request, EventRepository $eventRepository, CategoryRepository $categoryRepository): Response
     {
+        $selectedCategoryId = $request->query->get('category');
+
+        if ($selectedCategoryId) {
+            $events = $eventRepository->findBy(['category' => $selectedCategoryId]);
+        } else {
+            $events = $eventRepository->findAll();
+        }
+
         return $this->render('event/eventList.html.twig', [
-            'events' => $eventRepository->findAll()
+            'events' => $events,
+            'categories' => $categoryRepository->findAll(),
+            'selectedCategoryId' => $selectedCategoryId,
         ]);
     }
 

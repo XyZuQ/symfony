@@ -12,6 +12,6 @@ class HomepageController extends AbstractController
     #[Route('/', name: 'app_homepage')]
     public function dashboard(Request $request): Response
     {
-        return $this->redirectToRoute('app_dashboard');
+        return $this->redirectToRoute('app_dashboard_main');
     }
 }

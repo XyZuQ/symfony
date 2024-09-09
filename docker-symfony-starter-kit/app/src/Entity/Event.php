@@ -26,6 +26,9 @@ class Event
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $dateTo = null;
 
+    #[ORM\ManyToOne(inversedBy: 'event')]
+    private ?Category $category = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -75,6 +78,23 @@ class Event
     public function setDateTo(\DateTimeInterface $dateTo): static
     {
         $this->dateTo = $dateTo;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function getCategoryName(): ?string
+    {
+        return $this->category->getName() ? (string) $this->category->getName() : '-';
+    }
+
+    public function setCategory(?Category $category): static
+    {
+        $this->category = $category;
 
         return $this;
     }

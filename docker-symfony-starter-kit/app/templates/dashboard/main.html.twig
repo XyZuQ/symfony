@@ -1,0 +1,47 @@
+{% extends 'dashboard/dashboard.html.twig' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block display %}
+    <div class="container mt-4">
+        <h1>{{ "Current and upcoming events" | trans }}</h1>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>{{ "name" | trans }}</th>
+                <th>{{ "description" | trans }}</th>
+                <th>{{ "category" | trans }}</th>
+                <th>{{ "date_from" | trans }}</th>
+                <th>{{ "date_to" | trans }}</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for event in events %}
+                {% set now = date() %}
+                {% set daysToEvent = now.diff(event.dateFrom).days %}
+                <tr class="
+                {% if daysToEvent <= 3 %}
+                    table-danger
+                {% elseif daysToEvent <= 7 %}
+                    table-warning
+                {% else %}
+                    table-success
+                {% endif %}
+            ">
+                    <td>{{ event.id }}</td>
+                    <td>{{ event.name }}</td>
+                    <td>{{ event.description }}</td>
+                    <td>{{ event.getCategoryName() }}</td>
+                    <td>{{ event.dateFrom|date('Y-m-d') }}</td>
+                    <td>{{ event.dateTo|date('Y-m-d') }}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="6">{{ "No current or upcoming events" | trans }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

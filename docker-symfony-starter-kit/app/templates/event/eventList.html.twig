@@ -8,12 +8,30 @@
             <h1>{{ "events"|trans }}</h1>
             <a href="{{ path('app_event_create') }}" class="btn btn-success">{{ "add_new_event"|trans }}</a>
         </div>
+
+        {# Formularz filtrowania po kategorii #}
+        <form method="get" action="{{ path('app_events') }}" class="mb-3">
+            <div class="row">
+                <div class="col-md-4">
+                    <select name="category" class="form-control" onchange="this.form.submit()">
+                        <option value="">{{ "all_categories"|trans }}</option>
+                        {% for category in categories %}
+                            <option value="{{ category.id }}" {% if selectedCategoryId == category.id %}selected{% endif %}>
+                                {{ category.name }}
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </form>
+
         <table class="table table-striped">
-        <thead>
+            <thead>
             <tr>
                 <th>ID</th>
                 <th>{{ "name" | trans }}</th>
                 <th>{{ "description" | trans }}</th>
+                <th>{{ "category" | trans }}</th>
                 <th>{{ "date_from" | trans }}</th>
                 <th>{{ "date_to" | trans }}</th>
                 <th>{{ "actions" | trans }}</th>
@@ -25,6 +43,7 @@
                     <td>{{ event.id }}</td>
                     <td>{{ event.name }}</td>
                     <td>{{ event.description }}</td>
+                    <td>{{ event.getCategoryName() }}</td>
                     <td>{{ event.dateFrom|date('Y-m-d') }}</td>
                     <td>{{ event.dateTo|date('Y-m-d') }}</td>
                     <td>
@@ -34,7 +53,7 @@
                 </tr>
             {% else %}
                 <tr>
-                    <td colspan="6">{{ "no_records" | trans }}</td>
+                    <td colspan="7">{{ "no_records" | trans }}</td>
                 </tr>
             {% endfor %}
             </tbody>
