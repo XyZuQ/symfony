@@ -34,7 +34,7 @@
                 <th>{{ "category" | trans }}</th>
                 <th>{{ "date_from" | trans }}</th>
                 <th>{{ "date_to" | trans }}</th>
-                <th>{{ "actions" | trans }}</th>
+                <th>{{ "Actions" | trans }}</th>
             </tr>
             </thead>
             <tbody>
@@ -44,11 +44,11 @@
                     <td>{{ event.name }}</td>
                     <td>{{ event.description }}</td>
                     <td>{{ event.getCategoryName() }}</td>
-                    <td>{{ event.dateFrom|date('Y-m-d') }}</td>
-                    <td>{{ event.dateTo|date('Y-m-d') }}</td>
+                    <td>{{ event.dateFrom|date('d.m.Y') }}</td>
+                    <td>{{ event.dateTo|date('d.m.Y') }}</td>
                     <td>
                         <a href="{{ path('app_event_edit', {'id': event.id}) }}" class="btn btn-warning">{{ "Edit" | trans }}</a>
-                        <a href="{{ path('app_event_delete', {'id': event.id}) }}" class="btn btn-danger" onclick="return confirm('{{ "Are you sure?" | trans }}');">{{ "Delete" | trans }}</a>
+                        <a href="{{ path('app_event_delete', {'id': event.id}) }}" class="btn btn-danger">{{ "Delete" | trans }}</a>
                     </td>
                 </tr>
             {% else %}

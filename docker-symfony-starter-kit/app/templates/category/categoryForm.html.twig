@@ -10,10 +10,12 @@
         <div class="form-group">
             {{ form_label(form.name) }}
             {{ form_widget(form.name, { 'attr': {'class': 'form-control'} }) }}
+            {{ form_errors(form.name, {'attr': {'class': 'form-input'}}) }}
         </div>
         <div class="form-group">
             {{ form_label(form.event) }}
             {{ form_widget(form.event, { 'attr': {'class': 'form-control'} }) }}
+            {{ form_errors(form.event, {'attr': {'class': 'form-input'}}) }}
         </div>
         <button type="submit" class="btn btn-success mt-3">{{ "Save" | trans }}</button>
         {{ form_end(form) }}

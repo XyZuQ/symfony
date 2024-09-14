@@ -12,12 +12,10 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class ContactController extends AbstractController
 {
-    protected $contactRepository;
     protected $entityManager;
 
-    public function __construct(ContactRepository $contactRepository, EntityManagerInterface $entityManager)
+    public function __construct(EntityManagerInterface $entityManager)
     {
-        $this->contactRepository = $contactRepository;
         $this->entityManager = $entityManager;
     }
 
@@ -25,7 +23,7 @@ class ContactController extends AbstractController
     public function contactList(Request $request): Response
     {
         return $this->render('contact/contactList.html.twig', [
-            'items' => $this->contactRepository->findAll()
+            'items' => $this->entityManager->getRepository(Contact::class)->findAll()
         ]);
     }
 
@@ -53,7 +51,7 @@ class ContactController extends AbstractController
     #[Route('/contact/edit/{id}', name: 'app_contact_edit')]
     public function contactEdit(int $id, Request $request): Response
     {
-        $contact = $this->contactRepository->find($id);
+        $contact = $this->entityManager->getRepository(Contact::class)->find($id);
 
         if (!$contact) {
             throw $this->createNotFoundException('Contact not found.');
@@ -76,7 +74,7 @@ class ContactController extends AbstractController
     #[Route('/contact/delete/{id}', name: 'app_contact_delete')]
     public function contactDelete(int $id, Request $request): Response
     {
-        $contact = $this->contactRepository->find($id);
+        $contact = $this->entityManager->getRepository(Contact::class)->find($id);
 
         if (!$contact) {
             throw $this->createNotFoundException('Contact not found.');

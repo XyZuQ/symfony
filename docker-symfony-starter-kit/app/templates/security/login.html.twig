@@ -28,12 +28,6 @@
 
                 <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
-                <br>
-                <a href="{{ path('app_register') }}">
-                    {{ "redirect_register"|trans }}
-                </a>
-                <br>
-
                 <button class="btn btn-lg btn-primary btn-block" type="submit">
                     {{ "login"|trans }}
                 </button>

@@ -15,13 +15,10 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class CategoryController extends AbstractController
 {
-
-    protected $categoryRepository;
     protected $entityManager;
 
-    public function __construct(CategoryRepository $categoryRepository, EntityManagerInterface $entityManager)
+    public function __construct(EntityManagerInterface $entityManager)
     {
-        $this->categoryRepository = $categoryRepository;
         $this->entityManager = $entityManager;
     }
 
@@ -29,7 +26,7 @@ class CategoryController extends AbstractController
     public function categoryList(Request $request): Response
     {
         return $this->render('category/categoryList.html.twig', [
-            'items' => $this->categoryRepository->findAll()
+            'items' => $this->entityManager->getRepository(Category::class)->findAll()
         ]);
     }
 
@@ -60,7 +57,7 @@ class CategoryController extends AbstractController
     #[Route('/category/edit/{id}', name: 'app_category_edit')]
     public function categoryEdit(int $id, Request $request): Response
     {
-        $category = $this->categoryRepository->find($id);
+        $category = $this->entityManager->getRepository(Category::class)->find($id);
 
         if (!$category) {
             throw $this->createNotFoundException('Category not found.');
@@ -88,7 +85,7 @@ class CategoryController extends AbstractController
     #[Route('/category/delete/{id}', name: 'app_category_delete')]
     public function categoryDelete(int $id, Request $request): Response
     {
-        $category = $this->categoryRepository->find($id);
+        $category = $this->entityManager->getRepository(Category::class)->find($id);
 
         if (!$category) {
             throw $this->createNotFoundException('Category not found.');

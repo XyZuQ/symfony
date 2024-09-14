@@ -9,6 +9,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints as Constraint;
 
 class CategoryType extends AbstractType
 {
@@ -18,8 +19,9 @@ class CategoryType extends AbstractType
             ->add('name', TextType::class, [
                 'label' => 'Category Name',
                 'required' => true,
-                'attr' => [
-                    'maxLength' => 127,
+                'constraints' => [
+                    new Constraint\NotBlank(),
+                    new Constraint\Length(['max' => 127]),
                 ],
             ])
             ->add('event', EntityType::class, [
@@ -29,6 +31,9 @@ class CategoryType extends AbstractType
                 'multiple' => true,
                 'by_reference' => false,
                 'expanded' => false,
+                'constraints' => [
+                    new Constraint\NotBlank(),
+                ],
             ]);
     }
 

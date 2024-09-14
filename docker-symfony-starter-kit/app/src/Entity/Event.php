@@ -89,6 +89,9 @@ class Event
 
     public function getCategoryName(): ?string
     {
+        if ($this->category === null) {
+            return '-';
+        }
         return $this->category->getName() ? (string) $this->category->getName() : '-';
     }
 

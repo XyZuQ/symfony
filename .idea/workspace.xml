@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5123b76d-eaad-4369-90df-53df93d11c47" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Controller/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Controller/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Controller/ContactController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Controller/RegistrationController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Entity/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Entity/Event.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Form/CategoryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Form/CategoryType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Form/ContactType.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Form/ContactType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Form/EventType.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Form/EventType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Form/RegistrationFormType.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/templates/category/categoryForm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/templates/category/categoryForm.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/templates/category/categoryList.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/templates/category/categoryList.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/templates/contact/contactEdit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/templates/contact/contactEdit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/templates/contact/contactForm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/templates/contact/contactForm.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/templates/contact/contactList.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/templates/contact/contactList.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/templates/dashboard/dashboard.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/templates/dashboard/dashboard.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/templates/event/eventForm.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/templates/event/eventForm.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/templates/event/eventList.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/templates/event/eventList.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/templates/registration/register.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/translations/messages.en.xliff" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/translations/messages.en.xliff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/translations/messages.pl.xliff" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/translations/messages.pl.xliff" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;XyZuQ&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/XyZuQ/symfony.git&quot;,
+    &quot;accountId&quot;: &quot;b48688f0-4e03-4ba0-a13a-26f62d20eaa6&quot;
+  }
+}</component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2gAmXhy2V13H8UkvADc0Ar0gZrV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;web-ide.project.structure&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PS-241.15989.102" />
+        <option value="bundled-php-predefined-ba97393d7c68-c76157a7178b-com.jetbrains.php.sharedIndexes-PS-241.15989.102" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5123b76d-eaad-4369-90df-53df93d11c47" name="Changes" comment="" />
+      <created>1715148800563</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715148800563</updated>
+      <workItem from="1715148801215" duration="4025000" />
+      <workItem from="1716198022132" duration="3186000" />
+      <workItem from="1716201280136" duration="1257000" />
+      <workItem from="1716358817435" duration="2612000" />
+      <workItem from="1716363031037" duration="26000" />
+      <workItem from="1716964096498" duration="1354000" />
+      <workItem from="1717409164850" duration="431000" />
+      <workItem from="1717410165221" duration="35000" />
+      <workItem from="1717568481273" duration="448000" />
+      <workItem from="1717569283212" duration="597000" />
+      <workItem from="1722369722666" duration="920000" />
+      <workItem from="1722453322001" duration="2124000" />
+      <workItem from="1722455626151" duration="548000" />
+      <workItem from="1722456194525" duration="3129000" />
+      <workItem from="1725189471542" duration="2560000" />
+      <workItem from="1725300369969" duration="2827000" />
+      <workItem from="1726242597467" duration="888000" />
+      <workItem from="1726244544470" duration="12680000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

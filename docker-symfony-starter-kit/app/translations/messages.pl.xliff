@@ -1,194 +1,238 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
-  <file source-language="pl" target-language="pl" datatype="plaintext" original="file.ext">
+  <file source-language="pl" datatype="plaintext" original="file.ext">
     <header>
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
     <body>
-      <trans-unit id="QoghNQ6" resname="login">
+      <trans-unit id="login">
         <source>login</source>
         <target>Zaloguj się</target>
       </trans-unit>
-      <trans-unit id="giREF.l" resname="email">
+      <trans-unit id="email">
         <source>email</source>
         <target>E-mail</target>
       </trans-unit>
-      <trans-unit id="XohImNo" resname="password">
+      <trans-unit id="password">
         <source>password</source>
         <target>Hasło</target>
       </trans-unit>
-      <trans-unit id="h3gPpd5" resname="register">
+      <trans-unit id="register">
         <source>register</source>
         <target>Zarejestruj się</target>
       </trans-unit>
-      <trans-unit id="0l0K6UP" resname="registration.password.not_blank">
+      <trans-unit id="registration.password.not_blank">
         <source>registration.password.not_blank</source>
         <target>Proszę podać hasło</target>
       </trans-unit>
-      <trans-unit id="CqtNK9o" resname="registration.password.min_length">
+      <trans-unit id="registration.password.min_length">
         <source>registration.password.min_length</source>
         <target>Twoje hasło powinno mieć minimum {{ limit }} znaków</target>
       </trans-unit>
-      <trans-unit id=".JFhGW." resname="contact_list">
+      <trans-unit id="contact_list">
         <source>contact_list</source>
         <target>Lista kontaków</target>
       </trans-unit>
-      <trans-unit id="N9289hP" resname="event_list">
+      <trans-unit id="event_list">
         <source>event_list</source>
         <target>Lista wydarzeń</target>
       </trans-unit>
-      <trans-unit id="7RJrAom" resname="category_list">
+      <trans-unit id="category_list">
         <source>category_list</source>
         <target>Lista kategorii</target>
       </trans-unit>
-      <trans-unit id="vHpFjyy" resname="redirect_register">
+      <trans-unit id="redirect_register">
         <source>redirect_register</source>
         <target>Przejdź do rejestracji</target>
       </trans-unit>
-      <trans-unit id="r2IGFTF" resname="edit_contact">
+      <trans-unit id="edit_contact">
         <source>edit_contact</source>
         <target>Edytuj kontakt</target>
       </trans-unit>
-      <trans-unit id="EAVImTh" resname="create_contact">
+      <trans-unit id="create_contact">
         <source>create_contact</source>
         <target>Stwórz kontakt</target>
       </trans-unit>
-      <trans-unit id="qlr0CE8" resname="contacts">
+      <trans-unit id="contacts">
         <source>contacts</source>
         <target>Kontakty</target>
       </trans-unit>
-      <trans-unit id="yJUB1aj" resname="add_new_contact">
+      <trans-unit id="add_new_contact">
         <source>add_new_contact</source>
         <target>Dodaj nowy kontakt</target>
       </trans-unit>
-      <trans-unit id="BUFvv5j" resname="first_name">
+      <trans-unit id="first_name">
         <source>first_name</source>
         <target>Imie</target>
       </trans-unit>
-      <trans-unit id="4D1KCsF" resname="second_name">
+      <trans-unit id="second_name">
         <source>second_name</source>
         <target>Nazwisko</target>
       </trans-unit>
-      <trans-unit id="RVadpX9" resname="phone">
+      <trans-unit id="phone">
         <source>phone</source>
         <target>Telefon</target>
       </trans-unit>
-      <trans-unit id="YAjCb0R" resname="street">
+      <trans-unit id="street">
         <source>street</source>
         <target>Ulica</target>
       </trans-unit>
-      <trans-unit id="NJAGUnX" resname="post_code">
+      <trans-unit id="post_code">
         <source>post_code</source>
         <target>Kod pocztowy</target>
       </trans-unit>
-      <trans-unit id="EaYsI0E" resname="city">
+      <trans-unit id="city">
         <source>city</source>
         <target>Miasto</target>
       </trans-unit>
-      <trans-unit id="JiEhxTc" resname="edit">
+      <trans-unit id="edit">
         <source>edit</source>
         <target>Edytuj</target>
       </trans-unit>
-      <trans-unit id="YZdZVQP" resname="delete">
+      <trans-unit id="delete">
         <source>delete</source>
         <target>Usuń</target>
       </trans-unit>
-      <trans-unit id="NIv3q75" resname="no_records">
+      <trans-unit id="no_records">
         <source>no_records</source>
         <target>Brak rekordów</target>
       </trans-unit>
-      <trans-unit id="Zs2WiKK" resname="dashboard">
+      <trans-unit id="dashboard">
         <source>dashboard</source>
         <target>Panel</target>
       </trans-unit>
-      <trans-unit id="eUf5YZ3" resname="Event Form">
+      <trans-unit id="Event Form">
         <source>Event Form</source>
         <target>Formularz wydarzenia</target>
       </trans-unit>
-      <trans-unit id="FQn1YfJ" resname="Save">
+      <trans-unit id="Save">
         <source>Save</source>
         <target>Zapisz</target>
       </trans-unit>
-      <trans-unit id="jRT25y3" resname="Events">
+      <trans-unit id="Events">
         <source>Events</source>
         <target>Wydarzenia</target>
       </trans-unit>
-      <trans-unit id="hiQXuef" resname="events">
+      <trans-unit id="events">
         <source>events</source>
         <target>Wydarzenia</target>
       </trans-unit>
-      <trans-unit id="7gmyV_y" resname="add_new_event">
+      <trans-unit id="add_new_event">
         <source>add_new_event</source>
         <target>Dodaj nowe wydarzenie</target>
       </trans-unit>
-      <trans-unit id="gqNTf.D" resname="name">
+      <trans-unit id="name">
         <source>name</source>
         <target>Nazwa</target>
       </trans-unit>
-      <trans-unit id="yQRveje" resname="description">
+      <trans-unit id="description">
         <source>description</source>
         <target>Opis</target>
       </trans-unit>
-      <trans-unit id="UevEVsC" resname="date_from">
+      <trans-unit id="date_from">
         <source>date_from</source>
         <target>Data od</target>
       </trans-unit>
-      <trans-unit id="D1jgGr0" resname="date_to">
+      <trans-unit id="date_to">
         <source>date_to</source>
         <target>Data do</target>
       </trans-unit>
-      <trans-unit id="Kw3N1AA" resname="actions">
-        <source>actions</source>
+      <trans-unit id="Actions">
+        <source>Actions</source>
         <target>Akcje</target>
       </trans-unit>
-      <trans-unit id="RkxP.QG" resname="Edit">
+      <trans-unit id="Edit">
         <source>Edit</source>
         <target>Edytuj</target>
       </trans-unit>
-      <trans-unit id="8HYsTzv" resname="Are you sure?">
+      <trans-unit id="Are you sure?">
         <source>Are you sure?</source>
         <target>Czy na pewno?</target>
       </trans-unit>
-      <trans-unit id="4tClSWj" resname="Delete">
+      <trans-unit id="Delete">
         <source>Delete</source>
         <target>Usuń</target>
       </trans-unit>
-      <trans-unit id="all_categories" resname="all_categories">
-        <source>all_categories</source>
-        <target>Wszystkie kategorie</target>
-      </trans-unit>
-      <trans-unit id="category" resname="category">
-        <source>category</source>
-        <target>Kategoria</target>
-      </trans-unit>
-      <trans-unit id="Categories" resname="Categories">
-        <source>Categories</source>
-        <target>Kategorie</target>
-      </trans-unit>
-      <trans-unit id="categories" resname="categories">
-        <source>categories</source>
-        <target>kategorie</target>
-      </trans-unit>
-      <trans-unit id="add_new_category" resname="add_new_category">
-        <source>add_new_category</source>
-        <target>Dodaj nową kategorie</target>
-      </trans-unit>
-      <trans-unit id="Category Form" resname="Category Form">
+      <trans-unit id="Category Form">
         <source>Category Form</source>
         <target>Formularz kategorii</target>
       </trans-unit>
-      <trans-unit id="Category Name" resname="Category Name">
-        <source>Category Name</source>
-        <target>Nazwa kategorii</target>
+      <trans-unit id="Categories">
+        <source>Categories</source>
+        <target>Kategorie</target>
       </trans-unit>
-      <trans-unit id="Current and upcoming events" resname="Current and upcoming events">
+      <trans-unit id="add_new_category">
+        <source>add_new_category</source>
+        <target>Dodaj nową kategorię</target>
+      </trans-unit>
+      <trans-unit id="Current and upcoming events">
         <source>Current and upcoming events</source>
-        <target>Aktualne i nadchodzące wydarzenia</target>
+        <target>Obecne i nadchodzące wydarzenia</target>
       </trans-unit>
-      <trans-unit id="No current or upcoming events" resname="No current or upcoming events">
+      <trans-unit id="category">
+        <source>category</source>
+        <target>kategoria</target>
+      </trans-unit>
+      <trans-unit id="No current or upcoming events">
         <source>No current or upcoming events</source>
-        <target>Brak aktualnych lub nadchodzących wydarzeń</target>
+        <target>Brak obecnych lub nadchodzących wydarzeń</target>
       </trans-unit>
+      <trans-unit id="all_categories">
+        <source>all_categories</source>
+        <target>Wszystkie kategorie</target>
+      </trans-unit>
+     <trans-unit id="Event Name">
+        <source>Event Name</source>
+        <target>Nazwa wydarzenia</target>
+     </trans-unit>
+     <trans-unit id="Description">
+        <source>Description</source>
+        <target>Opis</target>
+     </trans-unit>
+     <trans-unit id="Date From">
+        <source>Date From</source>
+        <target>Data od</target>
+     </trans-unit>
+    <trans-unit id="Date To">
+        <source>Date To</source>
+        <target>Data do</target>
+    </trans-unit>
+    <trans-unit id="Category Name">
+        <source>Category Name</source>
+        <target>Nazwa Kategorii</target>
+    </trans-unit>
+    <trans-unit id="First Name">
+        <source>First Name</source>
+        <target>Imię</target>
+    </trans-unit>
+    <trans-unit id="Last Name">
+        <source>Last Name</source>
+        <target>Nazwisko</target>
+    </trans-unit>
+    <trans-unit id="Email">
+        <source>Email</source>
+        <target>Email</target>
+    </trans-unit>
+    <trans-unit id="Phone">
+        <source>Phone</source>
+        <target>Telefon</target>
+    </trans-unit>
+    <trans-unit id="Street">
+        <source>Street</source>
+        <target>Ulica</target>
+    </trans-unit>
+    <trans-unit id="Post Code">
+        <source>Post Code</source>
+        <target>Kod pocztowy</target>
+    </trans-unit>
+    <trans-unit id="City">
+        <source>City</source>
+        <target>Miasto</target>
+    </trans-unit>
+    <trans-unit id="Logout">
+        <source>Logout</source>
+        <target>Wyloguj</target>
+    </trans-unit>
     </body>
   </file>
 </xliff>
