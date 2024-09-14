@@ -1,9 +1,14 @@
 <?php
+/**
+ *  Contact Controller
+ *  This file is part of the project.
+ *
+ *  (c) Michał Plata <michal@plata.com>
+ */
 namespace App\Controller;
 
 use App\Entity\Contact;
 use App\Form\ContactType;
-use App\Repository\ContactRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -14,19 +19,28 @@ class ContactController extends AbstractController
 {
     protected $entityManager;
 
+    /**
+     * ContactController constructor.
+     */
     public function __construct(EntityManagerInterface $entityManager)
     {
         $this->entityManager = $entityManager;
     }
 
+    /**
+     * Displays a list of contacts.
+     */
     #[Route('/contacts', name: 'app_contacts')]
     public function contactList(Request $request): Response
     {
         return $this->render('contact/contactList.html.twig', [
-            'items' => $this->entityManager->getRepository(Contact::class)->findAll()
+            'items' => $this->entityManager->getRepository(Contact::class)->findAll(),
         ]);
     }
 
+    /**
+     * Creates a new contact.
+     */
     #[Route('/contact/create', name: 'app_contact_create')]
     public function contactCreate(Request $request, EntityManagerInterface $entityManager): Response
     {
@@ -47,7 +61,9 @@ class ContactController extends AbstractController
         ]);
     }
 
-
+    /**
+     * Edits an existing contact.
+     */
     #[Route('/contact/edit/{id}', name: 'app_contact_edit')]
     public function contactEdit(int $id, Request $request): Response
     {
@@ -62,6 +78,7 @@ class ContactController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->entityManager->flush();
+
             return $this->redirectToRoute('app_contacts');
         }
 
@@ -70,7 +87,9 @@ class ContactController extends AbstractController
         ]);
     }
 
-
+    /**
+     * Deletes a contact.
+     */
     #[Route('/contact/delete/{id}', name: 'app_contact_delete')]
     public function contactDelete(int $id, Request $request): Response
     {

@@ -1,5 +1,10 @@
 <?php
-
+/**
+ *  Contact Form
+ *  This file is part of the project.
+ *
+ *  (c) Michał Plata <michal@plata.com>
+ */
 namespace App\Form;
 
 use App\Entity\Contact;
@@ -11,8 +16,17 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints as Constraint;
 
+/**
+ *  Form type for Contact entity.
+ */
 class ContactType extends AbstractType
 {
+    /**
+     * Builds the form for the Contact entity.
+     *
+     * @param FormBuilderInterface $builder The form builder
+     * @param array                $options The options for the form
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
@@ -100,6 +114,11 @@ class ContactType extends AbstractType
             ]);
     }
 
+    /**
+     * Configures the options for the Contact form.
+     *
+     * @param OptionsResolver $resolver The options resolver
+     */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([

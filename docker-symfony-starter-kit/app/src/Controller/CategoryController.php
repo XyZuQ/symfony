@@ -1,12 +1,14 @@
 <?php
-
+/**
+ *  Category Controller
+ *  This file is part of the project.
+ *
+ *  (c) Michał Plata <michal@plata.com>
+ */
 namespace App\Controller;
 
 use App\Entity\Category;
-use App\Entity\Contact;
 use App\Form\CategoryType;
-use App\Form\ContactType;
-use App\Repository\CategoryRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,24 +19,32 @@ class CategoryController extends AbstractController
 {
     protected $entityManager;
 
+    /**
+     * CategoryController constructor.
+     */
     public function __construct(EntityManagerInterface $entityManager)
     {
         $this->entityManager = $entityManager;
     }
 
+    /**
+     * Displays a list of categories.
+     */
     #[Route('/categories', name: 'app_categories')]
     public function categoryList(Request $request): Response
     {
         return $this->render('category/categoryList.html.twig', [
-            'items' => $this->entityManager->getRepository(Category::class)->findAll()
+            'items' => $this->entityManager->getRepository(Category::class)->findAll(),
         ]);
     }
 
+    /**
+     * Creates a new category.
+     */
     #[Route('/category/create', name: 'app_category_create')]
     public function categoryCreate(Request $request, EntityManagerInterface $entityManager): Response
     {
         $category = new Category();
-
         $form = $this->createForm(CategoryType::class, $category);
         $form->handleRequest($request);
 
@@ -54,6 +64,9 @@ class CategoryController extends AbstractController
         ]);
     }
 
+    /**
+     * Edits an existing category.
+     */
     #[Route('/category/edit/{id}', name: 'app_category_edit')]
     public function categoryEdit(int $id, Request $request): Response
     {
@@ -82,6 +95,9 @@ class CategoryController extends AbstractController
         ]);
     }
 
+    /**
+     * Deletes an existing category.
+     */
     #[Route('/category/delete/{id}', name: 'app_category_delete')]
     public function categoryDelete(int $id, Request $request): Response
     {

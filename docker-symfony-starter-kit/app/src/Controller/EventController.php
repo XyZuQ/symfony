@@ -1,5 +1,10 @@
 <?php
-
+/**
+ *  Event Controller
+ *  This file is part of the project.
+ *
+ *  (c) Michał Plata <michal@plata.com>
+ */
 namespace App\Controller;
 
 use App\Entity\Event;
@@ -16,11 +21,17 @@ class EventController extends AbstractController
 {
     private $entityManager;
 
+    /**
+     * EventController constructor.
+     */
     public function __construct(EntityManagerInterface $entityManager)
     {
         $this->entityManager = $entityManager;
     }
 
+    /**
+     * Displays a list of events, optionally filtered by category.
+     */
     #[Route('/events', name: 'app_events')]
     public function eventList(Request $request, EventRepository $eventRepository, CategoryRepository $categoryRepository): Response
     {
@@ -39,6 +50,9 @@ class EventController extends AbstractController
         ]);
     }
 
+    /**
+     * Creates a new event.
+     */
     #[Route('/event/create', name: 'app_event_create')]
     public function eventCreate(Request $request): Response
     {
@@ -59,6 +73,9 @@ class EventController extends AbstractController
         ]);
     }
 
+    /**
+     * Edits an existing event.
+     */
     #[Route('/event/edit/{id}', name: 'app_event_edit')]
     public function eventEdit(Request $request, Event $event): Response
     {
@@ -77,6 +94,9 @@ class EventController extends AbstractController
         ]);
     }
 
+    /**
+     * Deletes an event.
+     */
     #[Route('/event/delete/{id}', name: 'app_event_delete')]
     public function eventDelete(Event $event): Response
     {

@@ -1,5 +1,10 @@
 <?php
-
+/**
+ *  User Repository
+ *  This file is part of the project.
+ *
+ *  (c) Michał Plata <michal@plata.com>
+ */
 namespace App\Repository;
 
 use App\Entity\User;
@@ -19,6 +24,12 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         parent::__construct($registry, User::class);
     }
 
+    /**
+     * @param PasswordAuthenticatedUserInterface $user
+     * @param string                             $newHashedPassword
+     *
+     * @return void
+     */
     public function upgradePassword(PasswordAuthenticatedUserInterface $user, string $newHashedPassword): void
     {
         if (!$user instanceof User) {

@@ -37,3 +37,6 @@ security:
     access_control:
         # - { path: ^/admin, roles: ROLE_ADMIN }
         - { path: ^/dashboard, roles: ROLE_USER }
+        - { path: ^/contacts, roles: ROLE_USER }
+        - { path: ^/events, roles: ROLE_USER }
+        - { path: ^/categories, roles: ROLE_ADMIN }

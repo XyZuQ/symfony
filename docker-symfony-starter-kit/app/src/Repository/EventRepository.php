@@ -1,5 +1,10 @@
 <?php
-
+/**
+ *  Event Repository
+ *  This file is part of the project.
+ *
+ *  (c) Michał Plata <michal@plata.com>
+ */
 namespace App\Repository;
 
 use App\Entity\Event;
