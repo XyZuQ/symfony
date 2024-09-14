@@ -4,41 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5123b76d-eaad-4369-90df-53df93d11c47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/DataFixtures/CategoryFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/DataFixtures/ContactFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/DataFixtures/EventFixtures.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/DataFixtures/UserFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b9b58ca5-a363-468a-a580-7030ecb67811.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b9b58ca5-a363-468a-a580-7030ecb67811.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/assets/controllers.json" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/assets/controllers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Controller/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Controller/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Controller/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Controller/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Controller/DashboardController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Controller/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Controller/EventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Controller/HomepageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Controller/HomepageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Controller/SecurityController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/DataFixtures/AppFixtures.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Entity/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Entity/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Entity/Contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Entity/Event.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Entity/Event.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Form/CategoryType.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Form/CategoryType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Form/ContactType.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Form/ContactType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Form/EventType.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Form/EventType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Repository/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Repository/CategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Repository/ContactRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Repository/ContactRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Repository/EventRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Repository/EventRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/src/Repository/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-symfony-starter-kit/app/templates/dashboard/dashboard.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/docker-symfony-starter-kit/app/templates/dashboard/dashboard.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="5123b76d-eaad-4369-90df-53df93d11c47" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -132,7 +98,7 @@
       <workItem from="1726242597467" duration="888000" />
       <workItem from="1726244544470" duration="12893000" />
       <workItem from="1726300253440" duration="9515000" />
-      <workItem from="1726325914941" duration="11624000" />
+      <workItem from="1726325914941" duration="11915000" />
     </task>
     <servers />
   </component>
