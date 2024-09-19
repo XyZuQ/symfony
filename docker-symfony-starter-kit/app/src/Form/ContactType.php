@@ -98,7 +98,7 @@ class ContactType extends AbstractType
                 'required' => false,
                 'constraints' => [
                     new Constraint\Length([
-                        'max' => 64
+                        'max' => 64,
                     ]),
                 ],
             ])
