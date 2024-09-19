@@ -8,15 +8,34 @@
 namespace App\Controller;
 
 use App\Repository\EventRepository;
+use App\Service\DashboardServiceInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
+/**
+ * Class DashboardController.
+ */
 class DashboardController extends AbstractController
 {
     /**
-     * Displays the dashboard page.
+     * @param DashboardServiceInterface $dashboardService
+     */
+    private DashboardServiceInterface $dashboardService;
+
+    /**
+     * @param DashboardServiceInterface $dashboardService
+     */
+    public function __construct(DashboardServiceInterface $dashboardService)
+    {
+        $this->dashboardService = $dashboardService;
+    }
+
+    /**
+     * @param Request $request
+     *
+     * @return Response
      */
     #[Route('/dashboard', name: 'app_dashboard')]
     public function dashboard(Request $request): Response
@@ -25,22 +44,13 @@ class DashboardController extends AbstractController
     }
 
     /**
-     * Displays the main dashboard with upcoming events.
+     * @return Response
      */
     #[Route('/dashboard/main', name: 'app_dashboard_main')]
-    public function dashboardMain(EventRepository $eventRepository): Response
+    public function dashboardMain(): Response
     {
-        $currentDate = new \DateTime();
-
-        $events = $eventRepository->createQueryBuilder('e')
-            ->where('e.dateFrom >= :currentDate')
-            ->setParameter('currentDate', $currentDate->format('Y-m-d'))
-            ->orderBy('e.dateFrom', 'ASC')
-            ->getQuery()
-            ->getResult();
-
         return $this->render('dashboard/main.html.twig', [
-            'events' => $events,
+            'events' => $this->dashboardService->getDashboardEventList(),
         ]);
     }
 }

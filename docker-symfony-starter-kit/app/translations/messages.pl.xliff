@@ -233,6 +233,46 @@
         <source>Logout</source>
         <target>Wyloguj</target>
     </trans-unit>
+    <trans-unit id="First name cannot be blank.">
+        <source>First name cannot be blank.</source>
+        <target>Imię nie może być puste.</target>
+    </trans-unit>
+    <trans-unit id="First name cannot exceed 32 characters.">
+        <source>First name cannot exceed 32 characters.</source>
+        <target>Imię nie może mieć więcej niż 32 znaki.</target>
+    </trans-unit>
+    <trans-unit id="Last name cannot be blank.">
+        <source>Last name cannot be blank.</source>
+        <target>Nazwisko nie może być puste.</target>
+    </trans-unit>
+    <trans-unit id="Last name cannot exceed 32 characters.">
+        <source>Last name cannot exceed 32 characters.</source>
+        <target>Nazwisko nie może mieć więcej niż 32 znaki.</target>
+    </trans-unit>
+    <trans-unit id="Email cannot be blank.">
+        <source>Email cannot be blank.</source>
+        <target>Email nie może być pusty.</target>
+    </trans-unit>
+    <trans-unit id="Email cannot exceed 64 characters.">
+        <source>Email cannot exceed 64 characters.</source>
+        <target>Email nie może być dłuższy niż 64 znaki.</target>
+    </trans-unit>
+    <trans-unit id="Phone number cannot exceed 12 characters.">
+        <source>Phone number cannot exceed 12 characters.</source>
+        <target>Numer telefonu nie może być dłuższy niż 12 cyfr.</target>
+    </trans-unit>
+    <trans-unit id="Street cannot exceed 64 characters.">
+        <source>Street cannot exceed 64 characters.</source>
+        <target>Nazwa ulicy nie może być dłuższa niż 64 znaki.</target>
+    </trans-unit>
+    <trans-unit id="Post code cannot exceed 10 characters.">
+        <source>Post code cannot exceed 10 characters.</source>
+        <target>Kod pocztowy nie może być dłuższy niż 10 znaków.</target>
+    </trans-unit>
+    <trans-unit id="City cannot exceed 64 characters.">
+        <source>City cannot exceed 64 characters.</source>
+        <target>Nazwa niasta nie może być dłuższa niż 64 znaki.</target>
+    </trans-unit>
     </body>
   </file>
 </xliff>

@@ -9,40 +9,50 @@ namespace App\Controller;
 
 use App\Entity\Contact;
 use App\Form\ContactType;
-use Doctrine\ORM\EntityManagerInterface;
+use App\Service\ContactServiceInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
+/**
+ * Class ContactController
+ */
 class ContactController extends AbstractController
 {
-    protected $entityManager;
+    /**
+     * @param ContactServiceInterface $contactService
+     */
+    private ContactServiceInterface $contactService;
 
     /**
-     * ContactController constructor.
+     * @param ContactServiceInterface $categoryService
      */
-    public function __construct(EntityManagerInterface $entityManager)
+    public function __construct(ContactServiceInterface $categoryService)
     {
-        $this->entityManager = $entityManager;
+        $this->contactService = $categoryService;
     }
 
     /**
-     * Displays a list of contacts.
+     * @param Request $request
+     *
+     * @return Response
      */
     #[Route('/contacts', name: 'app_contacts')]
     public function contactList(Request $request): Response
     {
         return $this->render('contact/contactList.html.twig', [
-            'items' => $this->entityManager->getRepository(Contact::class)->findAll(),
+            'items' => $this->contactService->getAllContact(),
         ]);
     }
 
     /**
-     * Creates a new contact.
+     * @param Request $request
+     *
+     * @return Response
      */
     #[Route('/contact/create', name: 'app_contact_create')]
-    public function contactCreate(Request $request, EntityManagerInterface $entityManager): Response
+    public function contactCreate(Request $request): Response
     {
         $contact = new Contact();
         $form = $this->createForm(ContactType::class, $contact);
@@ -50,8 +60,7 @@ class ContactController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager->persist($contact);
-            $entityManager->flush();
+            $this->contactService->createContact($contact);
 
             return $this->redirectToRoute('app_contacts');
         }
@@ -62,22 +71,21 @@ class ContactController extends AbstractController
     }
 
     /**
-     * Edits an existing contact.
+     * @param int     $id
+     * @param Request $request
+     *
+     * @return Response
      */
     #[Route('/contact/edit/{id}', name: 'app_contact_edit')]
     public function contactEdit(int $id, Request $request): Response
     {
-        $contact = $this->entityManager->getRepository(Contact::class)->find($id);
-
-        if (!$contact) {
-            throw $this->createNotFoundException('Contact not found.');
-        }
+        $contact = $this->contactService->getContactById($id);
 
         $form = $this->createForm(ContactType::class, $contact);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $this->entityManager->flush();
+            $this->contactService->editContact($contact);
 
             return $this->redirectToRoute('app_contacts');
         }
@@ -88,19 +96,17 @@ class ContactController extends AbstractController
     }
 
     /**
-     * Deletes a contact.
+     * @param int     $id
+     * @param Request $request
+     *
+     * @return Response
      */
     #[Route('/contact/delete/{id}', name: 'app_contact_delete')]
     public function contactDelete(int $id, Request $request): Response
     {
-        $contact = $this->entityManager->getRepository(Contact::class)->find($id);
+        $contact = $this->contactService->getContactById($id);
 
-        if (!$contact) {
-            throw $this->createNotFoundException('Contact not found.');
-        }
-
-        $this->entityManager->remove($contact);
-        $this->entityManager->flush();
+        $this->contactService->deleteContact($contact);
 
         return $this->redirectToRoute('app_contacts');
     }

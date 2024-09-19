@@ -12,10 +12,15 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
+/**
+ * Class HomepageController.
+ */
 class HomepageController extends AbstractController
 {
     /**
-     * Redirects to the main dashboard.
+     * @param Request $request
+     *
+     * @return Response
      */
     #[Route('/', name: 'app_homepage')]
     public function dashboard(Request $request): Response

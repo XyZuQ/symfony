@@ -9,8 +9,14 @@ namespace App\DataFixtures;
 
 use App\Entity\Event;
 
+/**
+ * Class EventFixtures.
+ */
 class EventFixtures extends AbstractBaseFixtures
 {
+    /**
+     * @return void
+     */
     protected function loadData(): void
     {
         $this->createMany(30, 'event', function (int $i) {

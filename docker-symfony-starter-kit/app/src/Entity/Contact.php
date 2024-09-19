@@ -10,32 +10,52 @@ namespace App\Entity;
 use App\Repository\ContactRepository;
 use Doctrine\ORM\Mapping as ORM;
 
+/**
+ * Class Contact.
+ */
 #[ORM\Entity(repositoryClass: ContactRepository::class)]
 class Contact
 {
+    /**
+     * @var int|null
+     */
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;
-
+    /**
+     * @var string|null
+     */
     #[ORM\Column(length: 255)]
     private ?string $firstName = null;
-
+    /**
+     * @var string|null
+     */
     #[ORM\Column(length: 255)]
     private ?string $lastName = null;
-
+    /**
+     * @var string|null
+     */
     #[ORM\Column(length: 255)]
     private ?string $email = null;
-
+    /**
+     * @var string|null
+     */
     #[ORM\Column(length: 255)]
     private ?string $phone = null;
-
+    /**
+     * @var string|null
+     */
     #[ORM\Column(length: 255)]
     private ?string $street = null;
-
+    /**
+     * @var string|null
+     */
     #[ORM\Column(length: 255)]
     private ?string $postCode = null;
-
+    /**
+     * @var string|null
+     */
     #[ORM\Column(length: 255)]
     private ?string $city = null;
 
@@ -60,9 +80,9 @@ class Contact
     }
 
     /**
-     * Sets the first name of the contact.
+     * @param string $firstName
      *
-     * @param string $firstName The first name
+     * @return $this
      */
     public function setFirstName(string $firstName): static
     {
@@ -82,9 +102,9 @@ class Contact
     }
 
     /**
-     * Sets the last name of the contact.
+     * @param string $lastName
      *
-     * @param string $lastName The last name
+     * @return $this
      */
     public function setLastName(string $lastName): static
     {
@@ -104,9 +124,9 @@ class Contact
     }
 
     /**
-     * Sets the email address of the contact.
+     * @param string $email
      *
-     * @param string $email The email address
+     * @return $this
      */
     public function setEmail(string $email): static
     {
@@ -126,9 +146,9 @@ class Contact
     }
 
     /**
-     * Sets the phone number of the contact.
+     * @param string $phone
      *
-     * @param string $phone The phone number
+     * @return $this
      */
     public function setPhone(string $phone): static
     {
@@ -148,9 +168,9 @@ class Contact
     }
 
     /**
-     * Sets the street address of the contact.
+     * @param string $street
      *
-     * @param string $street The street address
+     * @return $this
      */
     public function setStreet(string $street): static
     {
@@ -170,9 +190,9 @@ class Contact
     }
 
     /**
-     * Sets the postal code of the contact.
+     * @param string $postCode
      *
-     * @param string $postCode The postal code
+     * @return $this
      */
     public function setPostCode(string $postCode): static
     {
@@ -192,9 +212,9 @@ class Contact
     }
 
     /**
-     * Sets the city of the contact.
+     * @param string $city
      *
-     * @param string $city The city
+     * @return $this
      */
     public function setCity(string $city): static
     {

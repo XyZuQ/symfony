@@ -21,26 +21,24 @@ use Faker\Generator;
 abstract class AbstractBaseFixtures extends Fixture
 {
     /**
-     * Faker.
+     * @var Generator|null
      */
     protected ?Generator $faker = null;
 
     /**
-     * Persistence object manager.
+     * @var ObjectManager|null
      */
     protected ?ObjectManager $manager = null;
 
     /**
-     * Object reference index.
-     *
-     * @var array<string, array<int, array-key>>
+     * @var array
      */
     private array $referencesIndex = [];
 
     /**
-     * Load.
+     * @param ObjectManager $manager
      *
-     * @param ObjectManager $manager Persistence object manager
+     * @return void
      */
     public function load(ObjectManager $manager): void
     {
@@ -50,7 +48,7 @@ abstract class AbstractBaseFixtures extends Fixture
     }
 
     /**
-     * Load data.
+     * @return void
      */
     abstract protected function loadData(): void;
 
@@ -71,6 +69,8 @@ abstract class AbstractBaseFixtures extends Fixture
      * @param callable $factory   Defines method of creating objects
      *
      * @psalm-suppress PossiblyNullReference
+     *
+     * @return void
      */
     protected function createMany(int $count, string $groupName, callable $factory): void
     {

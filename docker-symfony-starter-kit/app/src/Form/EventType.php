@@ -64,9 +64,9 @@ class EventType extends AbstractType
     }
 
     /**
-     * Configures the options for the Event form.
+     * @param OptionsResolver $resolver
      *
-     * @param OptionsResolver $resolver The options resolver
+     * @return void
      */
     public function configureOptions(OptionsResolver $resolver): void
     {

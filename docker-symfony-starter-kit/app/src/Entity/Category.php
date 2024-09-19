@@ -12,19 +12,27 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
+/**
+ * Class Category.
+ */
 #[ORM\Entity(repositoryClass: CategoryRepository::class)]
 class Category
 {
+    /**
+     * @var int|null
+     */
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;
-
+    /**
+     * @var string|null
+     */
     #[ORM\Column(length: 127, nullable: true)]
     private ?string $name = null;
 
     /**
-     * @var Collection<int, Event> A collection of events associated with the category
+     * @var Collection|ArrayCollection
      */
     #[ORM\OneToMany(targetEntity: Event::class, mappedBy: 'category')]
     private Collection $event;
@@ -38,9 +46,7 @@ class Category
     }
 
     /**
-     * Gets the ID of the category.
-     *
-     * @return int|null The category ID
+     * @return int|null
      */
     public function getId(): ?int
     {
@@ -48,9 +54,9 @@ class Category
     }
 
     /**
-     * Sets the ID of the category.
+     * @param int|null $id
      *
-     * @param int|null $id The category ID
+     * @return $this
      */
     public function setId(?int $id): static
     {
@@ -60,9 +66,7 @@ class Category
     }
 
     /**
-     * Gets the name of the category.
-     *
-     * @return string|null The category name
+     * @return string|null
      */
     public function getName(): ?string
     {
@@ -70,9 +74,9 @@ class Category
     }
 
     /**
-     * Sets the name of the category.
+     * @param string|null $name
      *
-     * @param string|null $name The category name
+     * @return $this
      */
     public function setName(?string $name): static
     {
@@ -92,9 +96,9 @@ class Category
     }
 
     /**
-     * Adds an event to the category.
+     * @param Event $event
      *
-     * @param Event $event The event to add
+     * @return $this
      */
     public function addEvent(Event $event): static
     {
@@ -107,9 +111,9 @@ class Category
     }
 
     /**
-     * Removes an event from the category.
+     * @param Event $event
      *
-     * @param Event $event The event to remove
+     * @return $this
      */
     public function removeEvent(Event $event): static
     {

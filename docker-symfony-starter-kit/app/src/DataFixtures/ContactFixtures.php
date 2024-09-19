@@ -9,8 +9,14 @@ namespace App\DataFixtures;
 
 use App\Entity\Contact;
 
+/**
+ * Class ContactFixtures
+ */
 class ContactFixtures extends AbstractBaseFixtures
 {
+    /**
+     * @return void
+     */
     protected function loadData(): void
     {
         $this->createMany(20, 'contact', function (int $i) {

@@ -115,9 +115,9 @@ class ContactType extends AbstractType
     }
 
     /**
-     * Configures the options for the Contact form.
+     * @param OptionsResolver $resolver
      *
-     * @param OptionsResolver $resolver The options resolver
+     * @return void
      */
     public function configureOptions(OptionsResolver $resolver)
     {

@@ -12,21 +12,13 @@ use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Represents an event in the system.
- *
- * @ORM\Entity(repositoryClass=EventRepository::class)
+ * Class Event.
  */
 #[ORM\Entity(repositoryClass: EventRepository::class)]
 class Event
 {
     /**
-     * @var int|null the unique identifier for the event
-     *
-     * @ORM\Id
-     *
-     * @ORM\GeneratedValue
-     *
-     * @ORM\Column
+     * @var int|null
      */
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -94,9 +86,9 @@ class Event
     }
 
     /**
-     * Sets the name of the event.
+     * @param string $name
      *
-     * @param string $name The name of the event
+     * @return $this
      */
     public function setName(string $name): static
     {
@@ -116,9 +108,9 @@ class Event
     }
 
     /**
-     * Sets the description of the event.
+     * @param string $description
      *
-     * @param string $description The description of the event
+     * @return $this
      */
     public function setDescription(string $description): static
     {
@@ -138,9 +130,9 @@ class Event
     }
 
     /**
-     * Sets the start date of the event.
+     * @param \DateTimeInterface $dateFrom
      *
-     * @param \DateTimeInterface $dateFrom The start date of the event
+     * @return $this
      */
     public function setDateFrom(\DateTimeInterface $dateFrom): static
     {
@@ -160,9 +152,9 @@ class Event
     }
 
     /**
-     * Sets the end date of the event.
+     * @param \DateTimeInterface $dateTo
      *
-     * @param \DateTimeInterface $dateTo The end date of the event
+     * @return $this
      */
     public function setDateTo(\DateTimeInterface $dateTo): static
     {
@@ -197,9 +189,9 @@ class Event
     }
 
     /**
-     * Sets the category to which the event belongs.
+     * @param Category|null $category
      *
-     * @param Category|null $category The category to set
+     * @return $this
      */
     public function setCategory(?Category $category): static
     {
