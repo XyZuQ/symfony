@@ -31,7 +31,7 @@ class DashboardService implements DashboardServiceInterface
         $currentDate = new \DateTime();
 
         return $this->entityManager->getRepository(Event::class)->createQueryBuilder('e')
-            ->where('e.dateFrom >= :currentDate')
+            ->where('e.dateTo >= :currentDate')
             ->setParameter('currentDate', $currentDate->format('Y-m-d'))
             ->orderBy('e.dateFrom', 'ASC')
             ->getQuery()

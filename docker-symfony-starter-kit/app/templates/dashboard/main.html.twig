@@ -20,8 +20,9 @@
             {% for event in events %}
                 {% set now = date() %}
                 {% set daysToEvent = now.diff(event.dateFrom).days %}
+                {% set eventOngoing = now >= event.dateFrom and now <= event.dateTo %}
                 <tr class="
-                {% if daysToEvent <= 3 %}
+                {% if eventOngoing or daysToEvent <= 3 %}
                     table-danger
                 {% elseif daysToEvent <= 7 %}
                     table-warning
@@ -33,8 +34,8 @@
                     <td>{{ event.name }}</td>
                     <td>{{ event.description }}</td>
                     <td>{{ event.getCategoryName() }}</td>
-                    <td>{{ event.dateFrom|date('Y-m-d') }}</td>
-                    <td>{{ event.dateTo|date('Y-m-d') }}</td>
+                    <td>{{ event.dateFrom|date('d.m.Y') }}</td>
+                    <td>{{ event.dateTo|date('d.m.Y') }}</td>
                 </tr>
             {% else %}
                 <tr>
