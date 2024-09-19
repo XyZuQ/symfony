@@ -38,7 +38,6 @@ class ContactType extends AbstractType
                     ]),
                     new Constraint\Length([
                         'max' => 32,
-                        'maxMessage' => 'First name cannot exceed 32 characters.',
                     ]),
                 ],
             ])
@@ -50,7 +49,6 @@ class ContactType extends AbstractType
                     ]),
                     new Constraint\Length([
                         'max' => 32,
-                        'maxMessage' => 'Last name cannot exceed 32 characters.',
                     ]),
                 ],
             ])
@@ -65,7 +63,6 @@ class ContactType extends AbstractType
                     ]),
                     new Constraint\Length([
                         'max' => 64,
-                        'maxMessage' => 'Email cannot exceed 64 characters.',
                     ]),
                 ],
             ])
@@ -75,7 +72,6 @@ class ContactType extends AbstractType
                 'constraints' => [
                     new Constraint\Length([
                         'max' => 12,
-                        'maxMessage' => 'Phone number cannot exceed 12 characters.',
                     ]),
                 ],
             ])
@@ -85,7 +81,6 @@ class ContactType extends AbstractType
                 'constraints' => [
                     new Constraint\Length([
                         'max' => 64,
-                        'maxMessage' => 'Street cannot exceed 64 characters.',
                     ]),
                 ],
             ])
@@ -95,7 +90,6 @@ class ContactType extends AbstractType
                 'constraints' => [
                     new Constraint\Length([
                         'max' => 10,
-                        'maxMessage' => 'Post code cannot exceed 10 characters.',
                     ]),
                 ],
             ])
@@ -104,8 +98,7 @@ class ContactType extends AbstractType
                 'required' => false,
                 'constraints' => [
                     new Constraint\Length([
-                        'max' => 64,
-                        'maxMessage' => 'City cannot exceed 64 characters.',
+                        'max' => 64
                     ]),
                 ],
             ])
