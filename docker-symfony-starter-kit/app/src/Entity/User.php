@@ -22,33 +22,23 @@ use Symfony\Component\Security\Core\User\UserInterface;
 #[ORM\UniqueConstraint(name: 'UNIQ_IDENTIFIER_EMAIL', fields: ['email'])]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
-    /**
-     * @var int|null
-     */
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;
-    /**
-     * @var string|null
-     */
     #[ORM\Column(length: 180)]
     private ?string $email = null;
 
-    /**
-     * @var array
-     */
     #[ORM\Column]
     private array $roles = [];
 
-    /**
-     * @var string|null
-     */
     #[ORM\Column]
     private ?string $password = null;
 
     /**
-     * @return int|null
+     * Get User's Id function.
+     *
+     * @return int|null int|null
      */
     public function getId(): ?int
     {
@@ -56,7 +46,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
     /**
-     * @return string|null
+     * Get User's Email.
+     *
+     * @return string|null string|null
      */
     public function getEmail(): ?string
     {
@@ -64,9 +56,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
     /**
-     * @param string $email
+     * @param string $email email
      *
-     * @return $this
+     * @return $this this
      */
     public function setEmail(string $email): static
     {
@@ -76,7 +68,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
     /**
-     * @return string
+     * Get user's Identifier function.
+     *
+     * @return string string
      */
     public function getUserIdentifier(): string
     {
@@ -98,9 +92,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
     /**
-     * @param array $roles
+     * @param array $roles roles
      *
-     * @return $this
+     * @return $this this
      */
     public function setRoles(array $roles): static
     {
@@ -110,7 +104,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
     /**
-     * @return string
+     * Get user's password function.
+     *
+     * @return string string
      */
     public function getPassword(): string
     {
@@ -118,9 +114,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
     /**
-     * @param string $password
+     * @param string $password password
      *
-     * @return $this
+     * @return $this this
      */
     public function setPassword(string $password): static
     {
@@ -130,7 +126,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
     /**
-     * @return void
+     * Erase credentials.
      */
     public function eraseCredentials(): void
     {

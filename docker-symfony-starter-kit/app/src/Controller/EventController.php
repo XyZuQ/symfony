@@ -5,6 +5,7 @@
  *
  *  (c) Michał Plata <michal@plata.com>
  */
+
 namespace App\Controller;
 
 use App\Entity\Event;
@@ -22,18 +23,18 @@ use Symfony\Component\Routing\Annotation\Route;
 class EventController extends AbstractController
 {
     /**
-     * @param EventServiceInterface $eventService
+     * @param EventServiceInterface $eventService eventService
      */
     private EventServiceInterface $eventService;
 
     /**
-     * @param CategoryServiceInterface $categoryService
+     * @param CategoryServiceInterface $categoryService categoryService
      */
     private CategoryServiceInterface $categoryService;
 
     /**
-     * @param EventServiceInterface    $eventService
-     * @param CategoryServiceInterface $categoryService
+     * @param EventServiceInterface    $eventService    eventService
+     * @param CategoryServiceInterface $categoryService categoryService
      */
     public function __construct(EventServiceInterface $eventService, CategoryServiceInterface $categoryService)
     {
@@ -42,9 +43,9 @@ class EventController extends AbstractController
     }
 
     /**
-     * @param Request $request
+     * @param Request $request request
      *
-     * @return Response
+     * @return $this
      */
     #[Route('/events', name: 'app_events')]
     public function eventList(Request $request): Response
@@ -59,9 +60,9 @@ class EventController extends AbstractController
     }
 
     /**
-     * @param Request $request
+     * @param Request $request request
      *
-     * @return Response
+     * @return $this
      */
     #[Route('/event/create', name: 'app_event_create')]
     public function eventCreate(Request $request): Response
@@ -83,10 +84,10 @@ class EventController extends AbstractController
     }
 
     /**
-     * @param Request $request
-     * @param Event   $event
+     * @param Request $request request
+     * @param Event   $event   event
      *
-     * @return Response
+     * @return $this
      */
     #[Route('/event/edit/{id}', name: 'app_event_edit')]
     public function eventEdit(Request $request, Event $event): Response
@@ -107,9 +108,9 @@ class EventController extends AbstractController
     }
 
     /**
-     * @param Event $event
+     * @param Event $event event
      *
-     * @return Response
+     * @return $this
      */
     #[Route('/event/delete/{id}', name: 'app_event_delete')]
     public function eventDelete(Event $event): Response

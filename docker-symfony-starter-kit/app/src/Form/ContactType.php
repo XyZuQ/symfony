@@ -5,6 +5,7 @@
  *
  *  (c) Michał Plata <michal@plata.com>
  */
+
 namespace App\Form;
 
 use App\Entity\Contact;
@@ -108,9 +109,7 @@ class ContactType extends AbstractType
     }
 
     /**
-     * @param OptionsResolver $resolver
-     *
-     * @return void
+     * @param OptionsResolver $resolver resolver
      */
     public function configureOptions(OptionsResolver $resolver)
     {

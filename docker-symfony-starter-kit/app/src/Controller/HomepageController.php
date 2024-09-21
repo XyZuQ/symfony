@@ -5,6 +5,7 @@
  *
  *  (c) Michał Plata <michal@plata.com>
  */
+
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -18,9 +19,9 @@ use Symfony\Component\Routing\Attribute\Route;
 class HomepageController extends AbstractController
 {
     /**
-     * @param Request $request
+     * @param Request $request request
      *
-     * @return Response
+     * @return $this
      */
     #[Route('/', name: 'app_homepage')]
     public function dashboard(Request $request): Response

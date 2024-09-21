@@ -5,45 +5,38 @@
  *
  *  (c) Michał Plata <michal@plata.com>
  */
+
 namespace App\Service;
 
 use App\Entity\Category;
 
 /**
- * Interface CategoryServiceInterface
+ * Interface CategoryServiceInterface.
  */
 interface CategoryServiceInterface
 {
     /**
-     * @return array
+     * Function to get all categories.
      */
     public function getAllCategory(): array;
 
     /**
-     * @param Category $category
-     *
-     * @return void
+     * @param Category $category category
      */
     public function createCategory(Category $category): void;
 
     /**
-     * @param int $id
-     *
-     * @return Category
+     * @param int $id id
      */
     public function getCategoryById(int $id): Category;
 
     /**
-     * @param Category $category
-     *
-     * @return void
+     * @param Category $category category
      */
     public function editCategory(Category $category): void;
 
     /**
-     * @param Category $category
-     *
-     * @return void
+     * @param Category $category category
      */
     public function deleteCategory(Category $category): void;
 }

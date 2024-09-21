@@ -5,25 +5,28 @@
  *
  *  (c) Michał Plata <michal@plata.com>
  */
+
 namespace App\Service;
 
 use App\Entity\Contact;
 use Doctrine\ORM\EntityManagerInterface;
 
 /**
- * Class CategoryService
+ * Class CategoryService.
  */
 class ContactService implements ContactServiceInterface
 {
     /**
-     * @param EntityManagerInterface $entityManager
+     * @param EntityManagerInterface $entityManager entityManager
      */
     public function __construct(private EntityManagerInterface $entityManager)
     {
     }
 
     /**
-     * @return array
+     * Function to get all contacts.
+     *
+     * @return $this
      */
     public function getAllContact(): array
     {
@@ -31,9 +34,9 @@ class ContactService implements ContactServiceInterface
     }
 
     /**
-     * @param int $id
+     * @param int $id id
      *
-     * @return Contact
+     * @return $this
      */
     public function getContactById(int $id): Contact
     {
@@ -41,9 +44,7 @@ class ContactService implements ContactServiceInterface
     }
 
     /**
-     * @param Contact $contact
-     *
-     * @return void
+     * @param Contact $contact contact
      */
     public function createContact(Contact $contact): void
     {
@@ -52,9 +53,7 @@ class ContactService implements ContactServiceInterface
     }
 
     /**
-     * @param Contact $contact
-     *
-     * @return void
+     * @param Contact $contact contact
      */
     public function editContact(Contact $contact): void
     {
@@ -63,9 +62,7 @@ class ContactService implements ContactServiceInterface
     }
 
     /**
-     * @param Contact $contact
-     *
-     * @return void
+     * @param Contact $contact contact
      */
     public function deleteContact(Contact $contact): void
     {

@@ -5,6 +5,7 @@
  *
  *  (c) Michał Plata <michal@plata.com>
  */
+
 namespace App\Controller;
 
 use App\Entity\Contact;
@@ -16,17 +17,17 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
 /**
- * Class ContactController
+ * Class ContactController.
  */
 class ContactController extends AbstractController
 {
     /**
-     * @param ContactServiceInterface $contactService
+     * @param ContactServiceInterface $contactService contactService
      */
     private ContactServiceInterface $contactService;
 
     /**
-     * @param ContactServiceInterface $categoryService
+     * @param ContactServiceInterface $categoryService categoryService
      */
     public function __construct(ContactServiceInterface $categoryService)
     {
@@ -34,9 +35,9 @@ class ContactController extends AbstractController
     }
 
     /**
-     * @param Request $request
+     * @param Request $request request
      *
-     * @return Response
+     * @return $this
      */
     #[Route('/contacts', name: 'app_contacts')]
     public function contactList(Request $request): Response
@@ -47,9 +48,9 @@ class ContactController extends AbstractController
     }
 
     /**
-     * @param Request $request
+     * @param Request $request request
      *
-     * @return Response
+     * @return $this
      */
     #[Route('/contact/create', name: 'app_contact_create')]
     public function contactCreate(Request $request): Response
@@ -71,10 +72,10 @@ class ContactController extends AbstractController
     }
 
     /**
-     * @param int     $id
-     * @param Request $request
+     * @param int     $id      id
+     * @param Request $request request
      *
-     * @return Response
+     * @return $this
      */
     #[Route('/contact/edit/{id}', name: 'app_contact_edit')]
     public function contactEdit(int $id, Request $request): Response
@@ -96,10 +97,10 @@ class ContactController extends AbstractController
     }
 
     /**
-     * @param int     $id
-     * @param Request $request
+     * @param int     $id      id
+     * @param Request $request request
      *
-     * @return Response
+     * @return $this
      */
     #[Route('/contact/delete/{id}', name: 'app_contact_delete')]
     public function contactDelete(int $id, Request $request): Response

@@ -5,28 +5,30 @@
  *
  *  (c) Michał Plata <michal@plata.com>
  */
+
 namespace App\Service;
 
 use App\Entity\Event;
 use Doctrine\ORM\EntityManagerInterface;
 
 /**
- * Class EventService
+ * Class EventService.
  */
 class EventService implements EventServiceInterface
 {
-
     /**
-     * @param EntityManagerInterface $entityManager
+     * @param EntityManagerInterface $entityManager entityManager
      */
     public function __construct(private EntityManagerInterface $entityManager)
     {
     }
 
     /**
-     * @param int|null $categoryId
+     * Function for getting all events.
      *
-     * @return array
+     * @param int|null $categoryId categoryId
+     *
+     * @return $this
      */
     public function getAllEvent(?int $categoryId): array
     {
@@ -38,9 +40,11 @@ class EventService implements EventServiceInterface
     }
 
     /**
-     * @param int $id
+     * Funstion for getting events by Id.
      *
-     * @return Event
+     * @param int $id id
+     *
+     * @return $this
      */
     public function getEventById(int $id): Event
     {
@@ -48,9 +52,9 @@ class EventService implements EventServiceInterface
     }
 
     /**
-     * @param Event $event
+     * Function for event creation.
      *
-     * @return void
+     * @param Event $event event
      */
     public function createEvent(Event $event): void
     {
@@ -59,9 +63,7 @@ class EventService implements EventServiceInterface
     }
 
     /**
-     * @param Event $event
-     *
-     * @return void
+     * @param Event $event event
      */
     public function editEvent(Event $event): void
     {
@@ -70,9 +72,7 @@ class EventService implements EventServiceInterface
     }
 
     /**
-     * @param Event $event
-     *
-     * @return void
+     * @param Event $event event
      */
     public function deleteEvent(Event $event): void
     {

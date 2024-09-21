@@ -5,6 +5,7 @@
  *
  *  (c) Michał Plata <michal@plata.com>
  */
+
 namespace App\Entity;
 
 use App\Repository\EventRepository;
@@ -17,9 +18,6 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: EventRepository::class)]
 class Event
 {
-    /**
-     * @var int|null
-     */
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -86,9 +84,9 @@ class Event
     }
 
     /**
-     * @param string $name
+     * @param string $name name
      *
-     * @return $this
+     * @return $this this
      */
     public function setName(string $name): static
     {
@@ -108,9 +106,9 @@ class Event
     }
 
     /**
-     * @param string $description
+     * @param string $description description
      *
-     * @return $this
+     * @return $this this
      */
     public function setDescription(string $description): static
     {
@@ -130,9 +128,9 @@ class Event
     }
 
     /**
-     * @param \DateTimeInterface $dateFrom
+     * @param \DateTimeInterface $dateFrom dateFrom
      *
-     * @return $this
+     * @return $this this
      */
     public function setDateFrom(\DateTimeInterface $dateFrom): static
     {
@@ -152,9 +150,9 @@ class Event
     }
 
     /**
-     * @param \DateTimeInterface $dateTo
+     * @param \DateTimeInterface $dateTo dateTo
      *
-     * @return $this
+     * @return $this this
      */
     public function setDateTo(\DateTimeInterface $dateTo): static
     {
@@ -189,9 +187,9 @@ class Event
     }
 
     /**
-     * @param Category|null $category
+     * @param Category|null $category category
      *
-     * @return $this
+     * @return $this this
      */
     public function setCategory(?Category $category): static
     {

@@ -5,6 +5,7 @@
  *
  *  (c) Michał Plata <michal@plata.com>
  */
+
 namespace App\Entity;
 
 use App\Repository\CategoryRepository;
@@ -18,16 +19,10 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: CategoryRepository::class)]
 class Category
 {
-    /**
-     * @var int|null
-     */
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;
-    /**
-     * @var string|null
-     */
     #[ORM\Column(length: 127, nullable: true)]
     private ?string $name = null;
 
@@ -46,7 +41,9 @@ class Category
     }
 
     /**
-     * @return int|null
+     * Get user Id function.
+     *
+     * @return int|null int|null
      */
     public function getId(): ?int
     {
@@ -54,9 +51,9 @@ class Category
     }
 
     /**
-     * @param int|null $id
+     * @param int|null $id id
      *
-     * @return $this
+     * @return $this this
      */
     public function setId(?int $id): static
     {
@@ -66,7 +63,9 @@ class Category
     }
 
     /**
-     * @return string|null
+     * Get name function.
+     *
+     * @return string|null string|null
      */
     public function getName(): ?string
     {
@@ -74,7 +73,7 @@ class Category
     }
 
     /**
-     * @param string|null $name
+     * @param string|null $name name
      *
      * @return $this
      */
@@ -96,9 +95,9 @@ class Category
     }
 
     /**
-     * @param Event $event
+     * @param Event $event event
      *
-     * @return $this
+     * @return $this this
      */
     public function addEvent(Event $event): static
     {
@@ -111,9 +110,9 @@ class Category
     }
 
     /**
-     * @param Event $event
+     * @param Event $event event
      *
-     * @return $this
+     * @return $this this
      */
     public function removeEvent(Event $event): static
     {

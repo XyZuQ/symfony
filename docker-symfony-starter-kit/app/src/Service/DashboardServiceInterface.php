@@ -5,15 +5,16 @@
  *
  *  (c) Michał Plata <michal@plata.com>
  */
+
 namespace App\Service;
 
 /**
- * Interface DashboardServiceInterface
+ * Interface DashboardServiceInterface.
  */
 interface DashboardServiceInterface
 {
     /**
-     * @return array
+     * Function to get event list for dashboard.
      */
     public function getDashboardEventList(): array;
 }

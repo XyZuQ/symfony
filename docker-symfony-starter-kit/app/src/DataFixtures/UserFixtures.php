@@ -5,6 +5,7 @@
  *
  *  (c) Michał Plata <michal@plata.com>
  */
+
 namespace App\DataFixtures;
 
 use App\Entity\User;
@@ -17,13 +18,10 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
  */
 class UserFixtures extends Fixture
 {
-    /**
-     * @var UserPasswordHasherInterface
-     */
     private UserPasswordHasherInterface $passwordHasher;
 
     /**
-     * @param UserPasswordHasherInterface $passwordHasher
+     * @param UserPasswordHasherInterface $passwordHasher passwordHasher
      */
     public function __construct(UserPasswordHasherInterface $passwordHasher)
     {
@@ -31,9 +29,7 @@ class UserFixtures extends Fixture
     }
 
     /**
-     * @param ObjectManager $manager
-     *
-     * @return void
+     * @param ObjectManager $manager manager
      */
     public function load(ObjectManager $manager): void
     {

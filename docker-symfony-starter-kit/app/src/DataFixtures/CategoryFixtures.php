@@ -5,17 +5,18 @@
  *
  *  (c) Michał Plata <michal@plata.com>
  */
+
 namespace App\DataFixtures;
 
 use App\Entity\Category;
 
 /**
- * Class CategoryFixtures
+ * Class CategoryFixtures.
  */
 class CategoryFixtures extends AbstractBaseFixtures
 {
     /**
-     * @return void
+     * Data loading function.
      */
     protected function loadData(): void
     {

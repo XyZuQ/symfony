@@ -5,26 +5,28 @@
  *
  *  (c) Michał Plata <michal@plata.com>
  */
+
 namespace App\Service;
 
 use App\Entity\Category;
 use Doctrine\ORM\EntityManagerInterface;
 
 /**
- * Class CategoryService
+ * Class CategoryService.
  */
 class CategoryService implements CategoryServiceInterface
 {
-
     /**
-     * @param EntityManagerInterface $entityManager
+     * @param EntityManagerInterface $entityManager entityManager
      */
     public function __construct(private EntityManagerInterface $entityManager)
     {
     }
 
     /**
-     * @return array
+     * Function to get all categories.
+     *
+     * @return $this
      */
     public function getAllCategory(): array
     {
@@ -32,9 +34,9 @@ class CategoryService implements CategoryServiceInterface
     }
 
     /**
-     * @param int $id
+     * @param int $id id
      *
-     * @return Category
+     * @return $this
      */
     public function getCategoryById(int $id): Category
     {
@@ -42,9 +44,7 @@ class CategoryService implements CategoryServiceInterface
     }
 
     /**
-     * @param Category $category
-     *
-     * @return void
+     * @param Category $category category
      */
     public function createCategory(Category $category): void
     {
@@ -53,9 +53,7 @@ class CategoryService implements CategoryServiceInterface
     }
 
     /**
-     * @param Category $category
-     *
-     * @return void
+     * @param Category $category category
      */
     public function editCategory(Category $category): void
     {
@@ -64,9 +62,7 @@ class CategoryService implements CategoryServiceInterface
     }
 
     /**
-     * @param Category $category
-     *
-     * @return void
+     * @param Category $category category
      */
     public function deleteCategory(Category $category): void
     {

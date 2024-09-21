@@ -5,17 +5,18 @@
  *
  *  (c) Michał Plata <michal@plata.com>
  */
+
 namespace App\DataFixtures;
 
 use App\Entity\Contact;
 
 /**
- * Class ContactFixtures
+ * Class ContactFixtures.
  */
 class ContactFixtures extends AbstractBaseFixtures
 {
     /**
-     * @return void
+     * Data loading function.
      */
     protected function loadData(): void
     {

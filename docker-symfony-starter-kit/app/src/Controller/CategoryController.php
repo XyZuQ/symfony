@@ -5,6 +5,7 @@
  *
  *  (c) Michał Plata <michal@plata.com>
  */
+
 namespace App\Controller;
 
 use App\Entity\Category;
@@ -17,17 +18,17 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
 /**
- * Class CategoryController
+ * Class CategoryController.
  */
 class CategoryController extends AbstractController
 {
     /**
-     * @param CategoryService $categoryService
+     * @param CategoryService $categoryService categoryService
      */
     private CategoryServiceInterface $categoryService;
 
     /**
-     * @param CategoryServiceInterface $categoryService
+     * @param CategoryServiceInterface $categoryService categoryService
      */
     public function __construct(CategoryServiceInterface $categoryService)
     {
@@ -35,9 +36,9 @@ class CategoryController extends AbstractController
     }
 
     /**
-     * @param Request $request
+     * @param Request $request request
      *
-     * @return Response
+     * @return $this
      */
     #[Route('/categories', name: 'app_categories')]
     public function categoryList(Request $request): Response
@@ -48,9 +49,9 @@ class CategoryController extends AbstractController
     }
 
     /**
-     * @param Request $request
+     * @param Request $request request
      *
-     * @return Response
+     * @return $this
      */
     #[Route('/category/create', name: 'app_category_create')]
     public function categoryCreate(Request $request): Response
@@ -71,10 +72,10 @@ class CategoryController extends AbstractController
     }
 
     /**
-     * @param int     $id
-     * @param Request $request
+     * @param int     $id      id
+     * @param Request $request request
      *
-     * @return Response
+     * @return $this
      */
     #[Route('/category/edit/{id}', name: 'app_category_edit')]
     public function categoryEdit(int $id, Request $request): Response
@@ -96,10 +97,10 @@ class CategoryController extends AbstractController
     }
 
     /**
-     * @param int     $id
-     * @param Request $request
+     * @param int     $id      id
+     * @param Request $request request
      *
-     * @return Response
+     * @return $this
      */
     #[Route('/category/delete/{id}', name: 'app_category_delete')]
     public function categoryDelete(int $id, Request $request): Response

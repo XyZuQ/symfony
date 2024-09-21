@@ -5,6 +5,7 @@
  *
  *  (c) Michał Plata <michal@plata.com>
  */
+
 namespace App\Repository;
 
 use App\Entity\Contact;
@@ -17,7 +18,7 @@ use Doctrine\Persistence\ManagerRegistry;
 class ContactRepository extends ServiceEntityRepository
 {
     /**
-     * @param ManagerRegistry $registry
+     * @param ManagerRegistry $registry registry
      */
     public function __construct(ManagerRegistry $registry)
     {

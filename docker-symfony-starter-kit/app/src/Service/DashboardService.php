@@ -5,26 +5,28 @@
  *
  *  (c) Michał Plata <michal@plata.com>
  */
+
 namespace App\Service;
 
 use App\Entity\Event;
 use Doctrine\ORM\EntityManagerInterface;
 
 /**
- * Class DashboardService
+ * Class DashboardService.
  */
 class DashboardService implements DashboardServiceInterface
 {
-
     /**
-     * @param EntityManagerInterface $entityManager
+     * @param EntityManagerInterface $entityManager entityManager
      */
     public function __construct(private EntityManagerInterface $entityManager)
     {
     }
 
     /**
-     * @return array
+     * Function to get event list for dashboard.
+     *
+     * @return $this
      */
     public function getDashboardEventList(): array
     {

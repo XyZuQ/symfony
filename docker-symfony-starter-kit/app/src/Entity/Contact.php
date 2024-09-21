@@ -5,6 +5,7 @@
  *
  *  (c) Michał Plata <michal@plata.com>
  */
+
 namespace App\Entity;
 
 use App\Repository\ContactRepository;
@@ -16,46 +17,22 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: ContactRepository::class)]
 class Contact
 {
-    /**
-     * @var int|null
-     */
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
     private ?int $id = null;
-    /**
-     * @var string|null
-     */
     #[ORM\Column(length: 255)]
     private ?string $firstName = null;
-    /**
-     * @var string|null
-     */
     #[ORM\Column(length: 255)]
     private ?string $lastName = null;
-    /**
-     * @var string|null
-     */
     #[ORM\Column(length: 255)]
     private ?string $email = null;
-    /**
-     * @var string|null
-     */
     #[ORM\Column(length: 255)]
     private ?string $phone = null;
-    /**
-     * @var string|null
-     */
     #[ORM\Column(length: 255)]
     private ?string $street = null;
-    /**
-     * @var string|null
-     */
     #[ORM\Column(length: 255)]
     private ?string $postCode = null;
-    /**
-     * @var string|null
-     */
     #[ORM\Column(length: 255)]
     private ?string $city = null;
 
@@ -80,9 +57,9 @@ class Contact
     }
 
     /**
-     * @param string $firstName
+     * @param string $firstName firstName
      *
-     * @return $this
+     * @return $this this
      */
     public function setFirstName(string $firstName): static
     {
@@ -102,9 +79,9 @@ class Contact
     }
 
     /**
-     * @param string $lastName
+     * @param string $lastName lastName
      *
-     * @return $this
+     * @return $this this
      */
     public function setLastName(string $lastName): static
     {
@@ -124,9 +101,9 @@ class Contact
     }
 
     /**
-     * @param string $email
+     * @param string $email email
      *
-     * @return $this
+     * @return $this this
      */
     public function setEmail(string $email): static
     {
@@ -146,9 +123,9 @@ class Contact
     }
 
     /**
-     * @param string $phone
+     * @param string $phone phone
      *
-     * @return $this
+     * @return $this this
      */
     public function setPhone(string $phone): static
     {
@@ -168,9 +145,9 @@ class Contact
     }
 
     /**
-     * @param string $street
+     * @param string $street street
      *
-     * @return $this
+     * @return $this this
      */
     public function setStreet(string $street): static
     {
@@ -190,9 +167,9 @@ class Contact
     }
 
     /**
-     * @param string $postCode
+     * @param string $postCode postCode
      *
-     * @return $this
+     * @return $this this
      */
     public function setPostCode(string $postCode): static
     {
@@ -212,9 +189,9 @@ class Contact
     }
 
     /**
-     * @param string $city
+     * @param string $city city
      *
-     * @return $this
+     * @return $this this
      */
     public function setCity(string $city): static
     {

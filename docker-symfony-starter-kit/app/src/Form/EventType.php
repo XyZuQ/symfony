@@ -5,6 +5,7 @@
  *
  *  (c) Michał Plata <michal@plata.com>
  */
+
 namespace App\Form;
 
 use App\Entity\Event;
@@ -64,9 +65,7 @@ class EventType extends AbstractType
     }
 
     /**
-     * @param OptionsResolver $resolver
-     *
-     * @return void
+     * @param OptionsResolver $resolver resolver
      */
     public function configureOptions(OptionsResolver $resolver): void
     {

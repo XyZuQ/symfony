@@ -5,9 +5,9 @@
  *
  *  (c) Michał Plata <michal@plata.com>
  */
+
 namespace App\Controller;
 
-use App\Repository\EventRepository;
 use App\Service\DashboardServiceInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -20,12 +20,12 @@ use Symfony\Component\Routing\Attribute\Route;
 class DashboardController extends AbstractController
 {
     /**
-     * @param DashboardServiceInterface $dashboardService
+     * @param DashboardServiceInterface $dashboardService dashboardService
      */
     private DashboardServiceInterface $dashboardService;
 
     /**
-     * @param DashboardServiceInterface $dashboardService
+     * @param DashboardServiceInterface $dashboardService dashboardService
      */
     public function __construct(DashboardServiceInterface $dashboardService)
     {
@@ -33,9 +33,9 @@ class DashboardController extends AbstractController
     }
 
     /**
-     * @param Request $request
+     * @param Request $request request
      *
-     * @return Response
+     * @return $this
      */
     #[Route('/dashboard', name: 'app_dashboard')]
     public function dashboard(Request $request): Response
@@ -44,7 +44,7 @@ class DashboardController extends AbstractController
     }
 
     /**
-     * @return Response
+     * @return $this
      */
     #[Route('/dashboard/main', name: 'app_dashboard_main')]
     public function dashboardMain(): Response
